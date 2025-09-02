@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecommerce-Style Image Gallery</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- jQuery (CDN) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main class="page">
+    <section class="product grid" aria-label="Image gallery demo">
+      <!-- Left: Gallery -->
+      <div>
+        <div class="viewer" id="viewer" aria-live="polite">
+          <button class="nav prev" id="prevBtn" aria-label="Previous image">&#10094;</button>
+          <img id="mainImage" src="img/img2.jpg" alt="Headphones – front angle" />
+          <button class="nav next" id="nextBtn" aria-label="Next image">&#10095;</button>
+        </div>
+        <div class="thumbs" id="thumbStrip" role="listbox" aria-label="Thumbnails">
+          <button class="thumb active" role="option" aria-selected="true"
+            title="Front angle" 
+            data-large="img/img2.jpg" 
+            data-alt="Headphones – front angle">
+            <img src="img/img2.jpg" alt="Front angle thumbnail" />
+          </button>
+
+          <button class="thumb" role="option" title="Side angle" 
+            data-large="img/img3.jpg" 
+            data-alt="Headphones – side angle">
+            <img src="img/img3.jpg" alt="Side angle thumbnail" />
+          </button>
+
+          <button class="thumb" role="option" title="Folded view" 
+            data-large="img/img4.jpg" 
+            data-alt="Headphones – folded">
+            <img src="img/img4.jpg" alt="Folded thumbnail" />
+          </button>
+
+          <button class="thumb" role="option" title="Top view" 
+            data-large="img/img5.jpg" 
+            data-alt="Headphones – top view">
+            <img src="img/img5.jpg" alt="Top view thumbnail" />
+          </button>
+
+          <button class="thumb" role="option" title="Lifestyle" 
+            data-large="img/img6.jpg" 
+            data-alt="Headphones – lifestyle on desk">
+            <img src="img/img6.jpg" alt="Lifestyle thumbnail" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: Mock product info -->
+      <aside class="info">
+        <h1>PulseX Wireless Headphones</h1>
+        <div class="muted">Model PX-9 • Active Noise Canceling</div>
+        <div class="price">₱6,990</div>
+        <p class="muted">Sleek, comfy, and tuned for balanced sound. Up to 40 hours of battery life with quick charge support.</p>
+        <div style="display:flex;gap:10px;margin-top:12px">
+          <button class="btn" type="button">Add to Cart</button>
+          <button class="btn" type="button">Buy Now</button>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
